@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,23 +20,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sem-Jr-NFF">
                                 <rect key="frame" x="214" y="28" width="172" height="80"/>
                             </imageView>
-                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jaE-6C-TjN">
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jaE-6C-TjN">
                                 <rect key="frame" x="87" y="118" width="493" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTH-Q0-LXc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTH-Q0-LXc">
                                 <rect key="frame" x="12" y="122" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnc-dp-wcz">
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnc-dp-wcz">
                                 <rect key="frame" x="87" y="156" width="493" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1A-PS-ULV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1A-PS-ULV">
                                 <rect key="frame" x="12" y="160" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,13 +45,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jaE-6C-TjN" firstAttribute="trailing" secondItem="jnc-dp-wcz" secondAttribute="trailing" id="3JY-JZ-Tir"/>
+                            <constraint firstItem="vTH-Q0-LXc" firstAttribute="centerY" secondItem="jaE-6C-TjN" secondAttribute="centerY" id="77s-ma-hD7"/>
+                            <constraint firstItem="vTH-Q0-LXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="8dS-Lk-yOW"/>
+                            <constraint firstItem="P1A-PS-ULV" firstAttribute="centerY" secondItem="jnc-dp-wcz" secondAttribute="centerY" id="8tM-Pv-EPc"/>
                             <constraint firstItem="Sem-Jr-NFF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9V7-Qh-wpL"/>
+                            <constraint firstItem="jnc-dp-wcz" firstAttribute="leading" secondItem="P1A-PS-ULV" secondAttribute="trailing" constant="8" symbolic="YES" id="B5o-Ey-chV"/>
+                            <constraint firstItem="jnc-dp-wcz" firstAttribute="top" secondItem="jaE-6C-TjN" secondAttribute="bottom" constant="8" symbolic="YES" id="D2q-7m-vMB"/>
+                            <constraint firstItem="jaE-6C-TjN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N8E-hx-8J8"/>
                             <constraint firstItem="Sem-Jr-NFF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VSk-9I-kSg"/>
+                            <constraint firstItem="jnc-dp-wcz" firstAttribute="leading" secondItem="jaE-6C-TjN" secondAttribute="leading" id="Znj-yR-WpB"/>
+                            <constraint firstItem="vTH-Q0-LXc" firstAttribute="leading" secondItem="P1A-PS-ULV" secondAttribute="leading" id="lDx-mp-wKm"/>
+                            <constraint firstItem="jaE-6C-TjN" firstAttribute="top" secondItem="Sem-Jr-NFF" secondAttribute="bottom" constant="10" id="lWe-uj-zZz"/>
+                            <constraint firstItem="jaE-6C-TjN" firstAttribute="leading" secondItem="vTH-Q0-LXc" secondAttribute="trailing" constant="8" symbolic="YES" id="rDy-5G-nLz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="jaE-6C-TjN" id="cNj-hZ-WF1"/>
+                        <outlet property="numberField" destination="jnc-dp-wcz" id="lda-1k-RcJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="350" y="498"/>
         </scene>
     </scenes>
     <resources>
