@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var numberField: UITextField!
     
+    @IBAction func textFieldDoneEditing(sender:UITextField) {
+        sender.resignFirstResponder()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
