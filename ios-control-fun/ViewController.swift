@@ -17,6 +17,11 @@ class ViewController: UIViewController {
         sender.resignFirstResponder()
     }
     
+    @IBAction func backgroundTap(sender:UIControl) {
+        nameField.resignFirstResponder()
+        numberField.resignFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
