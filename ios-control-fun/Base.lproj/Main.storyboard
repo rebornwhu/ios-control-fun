@@ -48,6 +48,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-RL-LE9">
+                                <rect key="frame" x="85" y="298" width="497" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hrj-u7-10g"/>
+                                </connections>
+                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRf-Jl-kom">
                                 <rect key="frame" x="20" y="302" width="42" height="21"/>
                                 <constraints>
@@ -57,41 +63,73 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hSb-RL-LE9">
-                                <rect key="frame" x="85" y="298" width="497" height="31"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="d9x-qq-OP6">
+                                <rect key="frame" x="244" y="362" width="111" height="29"/>
+                                <segments>
+                                    <segment title="Switch"/>
+                                    <segment title="Button"/>
+                                </segments>
                                 <connections>
-                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hrj-u7-10g"/>
+                                    <action selector="toggleControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="EC7-3W-F2X"/>
                                 </connections>
-                            </slider>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90C-f1-hNm">
+                                <rect key="frame" x="20" y="415" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PAE-eB-Szy"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMK-2b-DsH">
+                                <rect key="frame" x="531" y="415" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LxQ-GG-VjA"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-k0-rl1">
+                                <rect key="frame" x="20" y="415" width="560" height="38"/>
+                                <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jaE-6C-TjN" firstAttribute="trailing" secondItem="jnc-dp-wcz" secondAttribute="trailing" id="3JY-JZ-Tir"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IwA-k0-rl1" secondAttribute="leading" id="3tv-GK-wip"/>
                             <constraint firstItem="vTH-Q0-LXc" firstAttribute="centerY" secondItem="jaE-6C-TjN" secondAttribute="centerY" id="77s-ma-hD7"/>
                             <constraint firstItem="hSb-RL-LE9" firstAttribute="centerY" secondItem="HRf-Jl-kom" secondAttribute="centerY" id="7HE-it-Ozv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OMK-2b-DsH" secondAttribute="trailing" id="85J-XY-f86"/>
                             <constraint firstItem="vTH-Q0-LXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="8dS-Lk-yOW"/>
                             <constraint firstItem="P1A-PS-ULV" firstAttribute="centerY" secondItem="jnc-dp-wcz" secondAttribute="centerY" id="8tM-Pv-EPc"/>
                             <constraint firstItem="Sem-Jr-NFF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9V7-Qh-wpL"/>
                             <constraint firstItem="jnc-dp-wcz" firstAttribute="leading" secondItem="P1A-PS-ULV" secondAttribute="trailing" constant="8" symbolic="YES" id="B5o-Ey-chV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="90C-f1-hNm" secondAttribute="leading" id="Cwc-gp-wVj"/>
                             <constraint firstItem="jnc-dp-wcz" firstAttribute="top" secondItem="jaE-6C-TjN" secondAttribute="bottom" constant="8" symbolic="YES" id="D2q-7m-vMB"/>
+                            <constraint firstItem="IwA-k0-rl1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="395" id="GdR-CZ-jKX"/>
                             <constraint firstItem="HRf-Jl-kom" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HGh-pa-v0Z"/>
+                            <constraint firstItem="OMK-2b-DsH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="395" id="HJD-oB-rW7"/>
                             <constraint firstItem="hSb-RL-LE9" firstAttribute="leading" secondItem="jnc-dp-wcz" secondAttribute="leading" id="LOu-MI-SBB"/>
                             <constraint firstItem="jaE-6C-TjN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N8E-hx-8J8"/>
+                            <constraint firstItem="90C-f1-hNm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="395" id="NYQ-WX-KiI"/>
                             <constraint firstItem="Sem-Jr-NFF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VSk-9I-kSg"/>
                             <constraint firstItem="hSb-RL-LE9" firstAttribute="trailing" secondItem="jnc-dp-wcz" secondAttribute="trailing" id="X4s-Sa-uPR"/>
                             <constraint firstItem="jnc-dp-wcz" firstAttribute="leading" secondItem="jaE-6C-TjN" secondAttribute="leading" id="Znj-yR-WpB"/>
                             <constraint firstItem="hSb-RL-LE9" firstAttribute="top" secondItem="jnc-dp-wcz" secondAttribute="bottom" constant="58" id="fsV-1L-IE0"/>
+                            <constraint firstItem="d9x-qq-OP6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i49-V8-hMg"/>
                             <constraint firstItem="vTH-Q0-LXc" firstAttribute="leading" secondItem="P1A-PS-ULV" secondAttribute="leading" id="lDx-mp-wKm"/>
                             <constraint firstItem="jaE-6C-TjN" firstAttribute="top" secondItem="Sem-Jr-NFF" secondAttribute="bottom" constant="64" id="lWe-uj-zZz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IwA-k0-rl1" secondAttribute="trailing" id="rDL-4h-xTW"/>
                             <constraint firstItem="jaE-6C-TjN" firstAttribute="leading" secondItem="vTH-Q0-LXc" secondAttribute="trailing" constant="8" symbolic="YES" id="rDy-5G-nLz"/>
+                            <constraint firstItem="d9x-qq-OP6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="342" id="sso-cy-9rY"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="pZJ-fi-r3d"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="leftSwitch" destination="90C-f1-hNm" id="jYh-qt-1Tr"/>
                         <outlet property="nameField" destination="jaE-6C-TjN" id="cNj-hZ-WF1"/>
                         <outlet property="numberField" destination="jnc-dp-wcz" id="lda-1k-RcJ"/>
+                        <outlet property="rightSwitch" destination="OMK-2b-DsH" id="d4d-6K-0tg"/>
                         <outlet property="sliderLabel" destination="HRf-Jl-kom" id="Ipx-d7-b8i"/>
                     </connections>
                 </viewController>
@@ -102,5 +140,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>

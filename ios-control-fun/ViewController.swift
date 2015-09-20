@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func switchChanged(sender: UISwitch) {
+        let setting = sender.on
+        leftSwitch.setOn(setting, animated: true)
+        rightSwitch.setOn(setting, animated: true)
+    }
+    
+    @IBAction func toggleControl(sender: UISegmentedControl) {
+    }
+
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var leftSwitch: UISwitch!
+    @IBOutlet weak var rightSwitch: UISwitch!
     
     @IBAction func textFieldDoneEditing(sender:UITextField) {
         sender.resignFirstResponder()
