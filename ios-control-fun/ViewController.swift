@@ -17,6 +17,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func toggleControl(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            leftSwitch.hidden = false
+            rightSwitch.hidden = false
+            doSomethingButton.hidden = true
+        }
+        else {
+            leftSwitch.hidden = true
+            rightSwitch.hidden = true
+            doSomethingButton.hidden = false
+        }
     }
 
     @IBOutlet weak var nameField: UITextField!
@@ -24,6 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var leftSwitch: UISwitch!
     @IBOutlet weak var rightSwitch: UISwitch!
+    @IBOutlet weak var doSomethingButton: UIButton!
     
     @IBAction func textFieldDoneEditing(sender:UITextField) {
         sender.resignFirstResponder()
@@ -50,6 +61,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonPressed(sender: UIButton) {
+        
+    }
 
 }
 

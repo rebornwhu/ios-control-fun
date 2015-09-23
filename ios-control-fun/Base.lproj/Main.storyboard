@@ -85,13 +85,16 @@
                                     <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LxQ-GG-VjA"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-k0-rl1">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-k0-rl1">
                                 <rect key="frame" x="20" y="415" width="560" height="38"/>
                                 <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
                                 <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvt-II-Iql"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.76470588235294112" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jaE-6C-TjN" firstAttribute="trailing" secondItem="jnc-dp-wcz" secondAttribute="trailing" id="3JY-JZ-Tir"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IwA-k0-rl1" secondAttribute="leading" id="3tv-GK-wip"/>
@@ -126,6 +129,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="IwA-k0-rl1" id="kAd-qf-LnI"/>
                         <outlet property="leftSwitch" destination="90C-f1-hNm" id="jYh-qt-1Tr"/>
                         <outlet property="nameField" destination="jaE-6C-TjN" id="cNj-hZ-WF1"/>
                         <outlet property="numberField" destination="jnc-dp-wcz" id="lda-1k-RcJ"/>
