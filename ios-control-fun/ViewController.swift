@@ -62,21 +62,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(sender: UIButton) {
-        let controller = UIAlertController(title: "Are You Sure?",
-            message: nil, preferredStyle: .ActionSheet)
+        let controller = UIAlertController(title:"Are You Sure?",
+            message:nil, preferredStyle:.ActionSheet)
         
-        let yesAction = UIAlertAction(title: "Yes, I'm sure!", style: .Destructive, handler: {
-            action in let msg = self.nameField.text!.isEmpty ?
-                "You can breathe easy, everything went OK." :
-            "You can breathe easy, \(self.nameField.text!), everything went OK."
+        let yesAction = UIAlertAction(title:"Yes, I'm sure!", style:.Destructive, handler: {
+            action in
+            let msg = self.nameField.text!.isEmpty
+                ? "You can breathe easy, everything went OK."
+                : "You can breathe easy, \(self.nameField.text!), everything went OK."
+
             let controller2 = UIAlertController(title: "Something Was Done",
-                message: msg, preferredStyle: .Alert)
-            let cancelAction = UIAlertAction(title: "Phew!", style: .Cancel, handler: nil)
+                message:msg, preferredStyle:.Alert)
+            
+            let cancelAction = UIAlertAction(title: "Phew!", style:.Cancel, handler:nil)
             controller2.addAction(cancelAction)
-            self.presentViewController(controller2, animated: true, completion: nil)
+            
+            self.presentViewController(controller2, animated:true, completion:nil)
         })
         
-        let noAction = UIAlertAction(title: "No way!", style: .Cancel, handler: nil)
+        let noAction = UIAlertAction(title:"No way!", style:.Cancel, handler:nil)
         controller.addAction(yesAction)
         controller.addAction(noAction)
         
@@ -86,8 +90,7 @@ class ViewController: UIViewController {
             ppc.permittedArrowDirections = .Down
         }
         
-        presentViewController(controller, animated: true, completion: nil)
+        presentViewController(controller, animated:true, completion:nil)
     }
 
 }
-
