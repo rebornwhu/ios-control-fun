@@ -87,7 +87,8 @@ class ViewController: UIViewController {
         if let ppc = controller.popoverPresentationController {
             ppc.sourceView = sender
             ppc.sourceRect = sender.bounds
-            ppc.permittedArrowDirections = .Down
+            // For show pop over alert on top of button on iPad
+//            ppc.permittedArrowDirections = .Down
         }
         
         presentViewController(controller, animated:true, completion:nil)
